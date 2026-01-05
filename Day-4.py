@@ -1,3 +1,4 @@
+'''
 String formatting    
 
 %s = String
@@ -19,3 +20,5 @@ String Method
 - isalpha()     - isdecimal()  -isdigit()   -isnumeric()  -isidentifier()
 - islower()    -isupper()  - join()  -strip()
 - replace()    - split()  -title()  -swapcase()    - startswith()
+
+'''
