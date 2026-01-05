@@ -486,3 +486,80 @@ Find the middle country(ies) in the countries list
 Divide the countries list into two equal lists if it is even if not one more country for the first half.
 ['China', 'Russia', 'USA', 'Finland', 'Sweden', 'Norway', 'Denmark']. Unpack the first three countries and the rest as scandic countries.
 """
+ages = [19, 22, 19, 24, 20, 25, 26, 24, 25, 24]
+ages.sort()
+print(ages)
+min_age = ages[0]
+max_age = ages[-1]
+
+ages.append(min_age)
+ages.append(max_age)
+
+n = len(ages)
+if n % 2 == 1:
+    # Odd length
+    median = ages[n // 2]
+else:
+    # Even length
+    median = (ages[n // 2 - 1] + ages[n // 2]) / 2
+
+print("Median age:", median)
+
+sum_age = sum(ages)
+average = sum_age // len(ages)
+print(f'The average age is {average:.2f}')
+
+#Exercise 6
+#1 create an empty tuple
+empty_tuple = ()
+
+#2Create a tuple containing names of your sisters and your brothers (imaginary siblings are fine)
+
+brothes = ('Hani','John','Miki')
+sisters = ('Dana','Saba','Merry')
+
+#3Join brothers and sisters tuple and assign it to siblings
+sibling = brothes + sisters
+
+#4 How many sibling do you have
+len(sibling)
+
+#5 Modify the siblings tuple and add the name of your father and mother and assign it to family_members
+
+family = list(sibling)
+family.insert(0,'Mymother')
+family.insert(1,'myfather')
+
+# 6 unpack siblings and parents from family_members
+father, mother , *sibling = family
+print(father, mother)
+print(sibling)
+
+#7 food_stuff_tp to food_stuff list
+food_stuff_tp = ('pasta','pizza','hamberger', 'taco', 'barrito')
+food_stuff = list(food_stuff_tp)
+
+#8 slice out the middle item or items from the food_stuff_tp or food_stuff_it
+
+num = len(food_stuff_tp)
+if num % 2 == 1:
+   middle = food_stuff_tp[num // 2]
+else:
+   middle = (food_stuff_tp[num // 2 + 1])
+
+# 9 Slice out the first three items and the last three items from food_staff_lt list
+print(food_stuff_tp[:3])
+print(food_stuff[-3:])
+
+# Delete the food_staff_tp tuple completely
+del food_stuff_tp
+
+# 10 Check if an item exists in tuple:
+nordic_countries = ('Denmark', 'Finland','Iceland', 'Norway', 'Sweden')
+print('Denmark' in nordic_countries)
+
+#Check if 'Estonia' is a nordic country
+print('Estonia' in nordic_countries)
+
+#Check if 'Iceland' is a nordic country
+print('Iceland' in nordic_countries)
