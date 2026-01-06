@@ -563,3 +563,29 @@ print('Estonia' in nordic_countries)
 
 #Check if 'Iceland' is a nordic country
 print('Iceland' in nordic_countries)
+
+
+#///////////////////////////////////////////////
+
+# Exercise 7
+
+# sets
+it_companies = {'Facebook', 'Google', 'Microsoft', 'Apple', 'IBM', 'Oracle', 'Amazon'}
+A = {19, 22, 24, 20, 25, 26}
+B = {19, 22, 20, 25, 26, 24, 28, 27}
+age = [22, 19, 24, 25, 26, 24, 25, 24]
+
+#1 Find the length of the set it_companies
+len(it_companie)
+# 2 Add 'Twitter' to it_companies
+it_companies.add('Twitter')
+
+# 3 Insert multiple IT companies at once to the set it_companies
+it_companies.update(['Uber','Lyft','Grubhub'])
+
+# 4 Remove one of the companies from the set it_companies
+it_companies.remove('Uber')
+
+# 5 What is the difference between remove and discard
+#remove only remove item from the set if the item is in the set but return error if the item not in the set
+#whie discard don't return error
