@@ -1,0 +1,15 @@
+Set is a collection of unordered and un-indexed distinct elements. In Python set is used to store unique items, and it is possible to find the
+union, 
+intersection, 
+difference, 
+symmetric difference, 
+subset, 
+super set and disjoint set among sets.
+` creating set
+st = set()
+methods 
+  - .add()    - .update() list[] argument for multiple items
+  - .remove() or discard() we use discard when we don't know if the item exist don't return error
+  - .pop()  - .clear() to empty set  - del  
+  - set3 = set1.union(set2)   - set3 = set1.intersection(set2)    - issubset()    -issuperset()
+  - isdisjoint()
