@@ -589,3 +589,58 @@ it_companies.remove('Uber')
 # 5 What is the difference between remove and discard
 #remove only remove item from the set if the item is in the set but return error if the item not in the set
 #whie discard don't return error
+
+#///////////////////////////////////////////////////
+#///////////////////////////////////////////////////
+
+#Exercise 8
+
+# 1 Create an empty dictionary called dog
+dog = {}
+# 2 Add name, color, breed, legs, age to the dog dictionary
+dog['name'] = 'Flefly'
+dog.update({
+    'color': 'white & black',
+    'breed': 'Germen sheber',
+    'legs': 4,
+    'age': 12
+})
+#  3 Create a student dictionary and add first_name, last_name, gender, age, marital status, skills, country, city and 
+# address as keys for the dictionary
+
+student = {
+   'first_name': 'Meda',
+   'last_name': 'Mesh',
+   'gender': 'Male',
+   'age': 34,
+   'is_maried': True,
+   'skills' :['Python', 'C++','Java'],
+   'country': 'USA',
+   'city': 'Los Angeles',
+   'address': {
+      'street': '123 Main St',
+      'Zipcode': '90098'
+   }
+
+}
+# 4 Get the length of the student dictionary
+print(len(student))
+# 5 Get the value of skills and check the data type, it should be a list
+print(type(student['skills']))
+
+# 6 Modify the skills values by adding one or two skills
+student['skills'].extend(['HTML','CSS'])
+# 7 Get the dictionary keys as a list
+keys_list = list(student.keys())
+
+# 8 Get the dictionary values as a list
+vales_list = list(student.values())
+
+# 9 Change the dictionary to a list of tuples using items() method
+list_items = list(student.items())
+
+# 10 Delete one of the items in the dictionary
+del student['country']
+
+# 11 Delete one of the dictionaries
+del student
