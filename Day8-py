@@ -1,0 +1,10 @@
+Dictionaries
+A dictionary is a collection of unordered, modifiable(mutable) paired (key: value) data type.
+Dictionary methods
+  - .items() changing dictionary in to list of tuples
+  - pop(key): removes the item with the specified key name:
+  - popitem(): removes the last item
+  - del: removes an item with specified key name
+  - .clear() clearing dictionary # None
+  - del dictionar # to delete the dictionary complitely
+  - .extend() to add multiple items to a dictionary
