@@ -254,6 +254,8 @@ print(word.replace('Everone', 'All'))
 
 #13 Split the string 'Coding For All' using space as the separator (split()) .
 word = 'Coding For All'
+s = word.split()
+print(s)
 
  #14 "Facebook, Google, Microsoft, Apple, IBM, Oracle, Amazon" split the string at the comma.
 tech = "Facebook, Google, Microsoft, Apple, IBM, Oracle, Amazon"
@@ -644,3 +646,117 @@ del student['country']
 
 # 11 Delete one of the dictionaries
 del student
+
+'''
+//////////////////////////////
+//////////////////////////////
+//////////////////////////////
+//////////////////////////////
+'''
+
+#Exercise 9
+#1 Get user input using input(“Enter your age: ”). If user is 18 or older, give feedback: You are old enough to drive. If below 18 give feedback to wait for the missing amount of years. Output:
+
+age = int(input('Enter your age: '))
+if age < 18:
+    print(f'You are {age} year old. Wait {18 - age} years to get a driver\'s license')
+else:
+    print('You are old enough to drive')
+
+#2 Compare the values of my_age and your_age using if … else. Who is older (me or you)? Use input(“Enter your age: ”) to get the age as input. You can use a nested condition to print 'year' for 1 year difference in age, 'years' for bigger differences, and a custom text if my_age = your_age. Output:
+
+my_age = 34
+your_age = int(input('Enter your age: '))
+if my_age > your_age:
+    print(f'you are {my_age - your_age} years younger than me')
+elif my_age == your_age:
+    print('we are as old as me')
+else:
+    print(f'You are {your_age - my_age} years older than me')
+
+#3 Get two numbers from the user using input prompt. If a is greater than b return a is greater than b, if a is less b return a is smaller than b, else a is equal to b. Output:
+
+a = int(input('Enter a number: '))
+b = int(input('Enter a number: '))
+
+if a > b:
+    print('a is greater than b')
+elif a < b:
+    print('a is smaller than b')
+else:
+    print('a is equal to b')
+
+#4 Check if the season is Autumn, Winter, Spring or Summer. If the user input is: September, October or November, the season is Autumn. December, January or February, the season is Winter. March, April or May, the season is Spring June, July or August, the season is Summer
+
+month = input("Enter a month: ").strip().capitalize()
+
+if month in ['September', 'October', 'November']:
+    print("The season is Autumn")
+elif month in ['December', 'January', 'February']:
+    print("The season is Winter")
+elif month in ['March', 'April', 'May']:
+    print("The season is Spring")
+elif month in ['June', 'July', 'August']:
+    print("The season is Summer")
+else:
+    print("Invalid month")
+
+#5 The following list contains some fruits:
+
+fruits = ['banana', 'orange', 'mango', 'lemon']
+
+#6 If a fruit doesn't exist in the list add the fruit to the list and print the modified list. If the fruit exists print('That fruit already exist in the list')
+fruits = ['banana', 'orange', 'mango', 'lemon']
+
+fruit = input('Enter fruit name: ').lower()
+
+if fruit in fruits:
+    print('Fruit exit')
+else:
+    fruits.append(fruit)
+    print(fruits)
+
+person={
+    'first_name': 'Asabeneh',
+    'last_name': 'Yetayeh',
+    'age': 250,
+    'country': 'Finland',
+    'is_married': True,
+    'skills': ['JavaScript', 'React', 'Node', 'MongoDB', 'Python'],
+    'address': {
+        'street': 'Space street',
+        'zipcode': '02210'
+    }
+    }
+#7 Check if the person dictionary has skills key, if so print out the middle skill in the skills list.
+if 'skills' in person:
+    skills = person['skills']
+    length = len(skills)
+    if length % 2 == 1:
+        middle = skills[length // 2]
+        print(middle)
+    else:
+        middle = skills[length // 2 - 1 :length // 2 + 1]
+        print(middle)
+
+ #8 * Check if the person dictionary has skills key, if so check if the person has 'Python' skill and print out the result.
+ if 'Python' in skills:
+    print(f'The person has the {'Python'} skill')
+
+ #9 * If a person skills has only JavaScript and React, print('He is a front end developer'), if the person skills has Node, Python, MongoDB, print('He is a backend developer'), if the person skills has React, Node and MongoDB, Print('He is a fullstack developer'), else print('unknown title') - for more accurate results more conditions can be nested!
+
+ skills = person.get('skills', [])
+skill_set = set(skills)
+
+if skill_set == {'JavaScript', 'React'}:
+    print('The person is a Frontend Developer')
+elif {'React', 'Node', 'MongoDB'}.issubset(skill_set):
+    print('The person is a FullStack Develper')
+elif {'Node', 'Python', 'MongoDB'}.issubset(skill_set):
+    print('The person is a Backend Developer')
+else:
+    print('Unknown Title')
+
+#10 * If the person is married and if he lives in Finland, print the information in the following format:
+if person.get('is_married') and person.get('country') == 'Finland':
+    print(f'The person first name is {person['first_name']} last name is {person['last_name']}')
