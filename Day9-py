@@ -1,0 +1,9 @@
+Conditionals
+
+# syntax
+if condition:
+    code
+elif condition:
+    code
+else:
+    code
