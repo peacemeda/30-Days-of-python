@@ -1,0 +1,24 @@
+Life is full of routines. In programming we also do lots of repetitive tasks. In order to handle repetitive task programming languages use loops.
+
+1 while loop
+2 for loop
+
+  # syntax
+while condition:
+    code goes here
+else:
+    code goes here
+
+Break and Continue - Part 1
+Break: We use break when we like to get out of or stop the loop.
+# syntax
+while condition:
+    code goes here
+    if another_condition:
+        break
+
+nested for loop
+for key in person:
+    if key == 'skills':
+        for skill in person['skills']:
+            print(skill)
