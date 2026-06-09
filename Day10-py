@@ -12,3 +12,35 @@ We use the reserved word while to make a while loop. It is used to execute a blo
   # syntax
 while condition:
     code goes here
+
+Break and Continue - Part 1
+Break: We use break when we like to get out of or stop the loop.
+# syntax
+while condition:
+    code goes here
+    if another_condition:
+        break
+Example:
+
+count = 0
+while count < 5:
+    print(count)
+    count = count + 1
+    if count == 3:
+        break
+
+Continue: With the continue statement we can skip the current iteration, and continue with the next:
+  # syntax
+while condition:
+    code goes here
+    if another_condition:
+        continue
+Example:
+
+count = 0
+while count < 5:
+    if count == 3:
+        count += 1
+        continue
+    print(count)
+    count = count + 1

@@ -135,6 +135,21 @@ print(f'The slope is {m2:.2f} and the Euclidean distance is {d:.2f}')
 print(f'comparing slope 1 and 2 {m1 == m2} ')
 #11 calculate y for y = x^2 + 6x + 9
 
+def cal_y(x):
+    return x ** 2 + 6*x + 9
+print(' x | y ')
+print('-------')
+
+for x in range(-4, 2):
+    y = cal_y(x)
+    print(f'{x:>2} | {y:>2}')
+
+    if y == 0:
+        f_x = x
+
+print(f'Succeful find x when y is 0 equal {f_x}')
+
+
 
 #12 find the length of python
 print(len('python'))
@@ -340,7 +355,7 @@ print(text1.isidentifier())
 #32 The following list contains the names of some of python libraries: ['Django', 'Flask', 'Bottle', 'Pyramid', 'Falcon']. Join the list with a hash with space string.
 
 text = ['Django', 'Flask', 'Bottle', 'Pyramid', 'Falcon']
-word = ' # '.join('text')
+word = ' # '.join(text)
 print('#',word)
 
 #33 Use the new line escape sequence to separate the following sentences.

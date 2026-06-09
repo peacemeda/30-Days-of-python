@@ -1,3 +1,4 @@
+"""
 There are 4 collection day type
 1, list
 2, tuple
@@ -28,3 +29,4 @@ print(fruits)
 fruits.insert(4,'lime')
 print(fruit)
 ['banana', 'orange', 'mango', 'lemon','lime','apple']
+"""
