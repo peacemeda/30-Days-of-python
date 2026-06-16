@@ -1,3 +1,6 @@
+
+
+"""
 Loops
 -----
 
@@ -8,19 +11,19 @@ for loop
 
 While Loop
 We use the reserved word while to make a while loop. It is used to execute a block of statements repeatedly until a given condition is satisfied. When the condition becomes false, the lines of code after the loop will be continued to be executed.
-
+"""
   # syntax
 while condition:
-    code goes here
+    code 
 
-Break and Continue - Part 1
-Break: We use break when we like to get out of or stop the loop.
+#Break and Continue - Part 1
+#Break: We use break when we like to get out of or stop the loop.
 # syntax
 while condition:
-    code goes here
+    code 
     if another_condition:
         break
-Example:
+Example
 
 count = 0
 while count < 5:
@@ -29,13 +32,13 @@ while count < 5:
     if count == 3:
         break
 
-Continue: With the continue statement we can skip the current iteration, and continue with the next:
+#Continue: With the continue statement we can skip the current iteration, and continue with the next:
   # syntax
 while condition:
-    code goes here
+    code 
     if another_condition:
         continue
-Example:
+Example
 
 count = 0
 while count < 5:

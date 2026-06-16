@@ -790,6 +790,7 @@ while count < 11:
 
 for i in range(11):
     print(i)
+    i+=1
 #2 Iterate 10 to 0 using for loop, do the same using while loop.
 for i in range(10,-1,-1):
     print(i)
@@ -861,3 +862,75 @@ for num in range (101):
     else:
         odd_sum += num
 print(f'The sum of all even is {even_sum}; and sum of all odd is {odd_sum}.')
+
+#11 Go to the data folder and use the countries.py file. Loop through the countries and extract all the countries containing the word land.
+
+from countries import countries_data
+
+land_countries = []
+
+for country in countries_data:
+    if 'land' in country['name'].lower():
+        land_countries.append(country['name'])
+
+print(land_countries)
+
+total = 0
+for i in land_countries:
+    total += 1
+print(total)
+
+#12 This is a fruit list, ['banana', 'orange', 'mango', 'lemon'] reverse the order using loop.
+fruit = ['banana', 'orange', 'mango', 'lemon'] 
+
+reverse_fruit = []
+
+for i in range(len(fruit) -1 ,-1,-1):
+    reverse_fruit.append(fruit[i])
+print(reverse_fruit)
+
+#Go to the data folder and use the countries_data.py file.
+#i, What are the total number of languages in the data
+
+from countries import countries_data
+
+all_languages = set()
+
+for country in countries_data:
+    for language in country['languages']:
+        all_languages.add(language)
+
+print("Total number of languages:", len(all_languages))
+
+#ii, Find the ten most spoken languages from the data
+from countries import countries_data
+
+language_count = {}
+
+for country in countries_data:
+    for language in country['languages']:
+        if language in language_count:
+            language_count[language] += 1
+        else:
+            language_count = 1
+
+for i, language in enumerate(language_count, start=1):
+    print(f'{i}. {language}')
+
+#iii, Find the 10 most populated countries in the world
+
+from countries import countries_data
+
+sorted_countries = sorted(
+    countries_data,
+    key=lambda country: country['population'],
+    reverse=True
+)
+
+print("Top 10 Most Populated Countries:")
+
+for i, country in enumerate(sorted_countries[:10], start=1):
+    print(
+        f"{i}. {country['name']} - "
+        f"{country['population']:,}"
+    )
